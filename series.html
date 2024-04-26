@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmw series</title>
+    <link rel="stylesheet" href="series.css">
+    <script src="series.js" defer></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbarlogo">
+            <a href="main.html"><img src="bmwlogo2.png" alt="Your Logo" class="logo"></a>
+        </div>
+        <div class="navbarItems">
+            <a href="series.html">All Models</a>
+            <a href="services">Electric</a>
+            <a href="contact">M-Sport</a>
+        </div>
+        <div class="navbarItems navbarItemsRight">
+            <a href="cart.html">Cart</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </div>
+
+    <div class="pagediv">
+        <div class="sidebar">
+            <label for="carModel">Model:</label>
+            <select id="carModel">
+                <option value="all">All</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="X">X</option>
+            </select>
+    
+            <label for="carEngine">Engine:</label>
+            <select id="carEngine">
+                <option value="all">All</option>
+            </select>
+    
+            <label for="minPrice">Min Price:</label>
+            <input type="number" id="minPrice" placeholder="Min Price">
+    
+            <label for="maxPrice">Max Price:</label>
+            <input type="number" id="maxPrice" placeholder="Max Price">
+    
+            <button id="applyFiltersBtn">Apply Filters</button>
+        </div>
+
+        <div class="allCards"></div>
+
+    </div>
+</body>
+
+
+</html>

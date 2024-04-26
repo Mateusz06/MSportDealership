@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbarItems {
+    display: flex;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbarItemsRight {
+    margin-left: auto;
+}
+
+.navbarlogo a:hover {
+    color: hsl(216, 100%, 61%);
+    border-radius: 2px;
+}
+
+.navbarItems a:hover {
+    color: hsl(216, 100%, 61%);
+    border: 2px solid hsl(216, 100%, 61%);
+    border-radius: 2px;
+}
+
+.navbar .logo {
+    height: 60px;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.thank-you-message {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 900px;
+}
+
+.thank-you-message h2 {
+    color: #000000;
+}
+
+.thank-you-message p {
+    color: #333;
+}

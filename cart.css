@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbarItems {
+    display: flex;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbarItemsRight {
+    margin-left: auto;
+}
+
+.navbarlogo a:hover {
+    color: hsl(216, 100%, 61%);
+    border-radius: 2px;
+}
+
+.navbarItems a:hover {
+    color: hsl(216, 100%, 61%);
+    border: 2px solid hsl(216, 100%, 61%);
+    border-radius: 2px;
+}
+
+.navbar .logo {
+    height: 60px;
+    width: auto;
+}
+
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart-main-card {
+    flex: 0 0 calc(65% - 10px);
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cart-items {
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cart-item img {
+    max-width: 30%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.cart-item .car-details {
+    width: 70%;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.delete-button {
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #999999;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d14836;
+}
+
+.total-card {
+    flex: 0 0 calc(32% - 10px);
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buy-button:hover {
+    background-color: #45a049;
+}
+
+.disable {
+    background-color: #999999 !important;
+}
