@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function addToCart(car) {
-    let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) ?? [];
     cartItems.push(car);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     updateCartIndicator();
