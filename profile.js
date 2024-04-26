@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add event listener to "Add to Cart" button
         document.querySelector('.add-to-cart-button').addEventListener('click', function () {
             addToCart(car);
+            location.reload(); // Refresh the page after adding to cart
         });
     } else {
         console.error('No car data found in local storage');
@@ -23,15 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function addToCart(car) {
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-    // Add the current car to the cart
+    let cartItems = JSON.parse(localStorage.getItem('cartItems'));
     cartItems.push(car);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartIndicator(); // Update cart indicator after adding to cart
 }
 
 function updateCartIndicator() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
     const cartIndicator = document.getElementById('cart-indicator');
     if (cartItems.length > 0) {
         cartIndicator.classList.add('red-dot');
@@ -39,6 +39,7 @@ function updateCartIndicator() {
         cartIndicator.classList.remove('red-dot');
     }
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     updateCartIndicator(); // Update cart indicator on page load
 });
