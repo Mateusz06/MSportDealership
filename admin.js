@@ -87,7 +87,6 @@ function displaySeries(data) {
             updateSelectedCar(car);
         });
 
-        // Create delete button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', () => {
@@ -102,7 +101,7 @@ function displaySeries(data) {
         card.appendChild(typeInput);
         card.appendChild(priceInput);
         card.appendChild(updateButton);
-        card.appendChild(deleteButton); // Append delete button to card
+        card.appendChild(deleteButton);
         container.appendChild(card);
     });
 }
@@ -133,7 +132,7 @@ function deleteProduct(productId) {
     const storedData = JSON.parse(localStorage.getItem('seriesData')) || [];
     const updatedData = storedData.filter(product => product.id !== productId);
     localStorage.setItem('seriesData', JSON.stringify(updatedData));
-    displaySeriesFromLocalStorage(); // Refresh display after deletion
+    displaySeriesFromLocalStorage();
 }
 
 document.addEventListener('DOMContentLoaded', function () {

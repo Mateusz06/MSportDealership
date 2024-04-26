@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (carData) {
         const car = JSON.parse(carData);
 
-        // Update DOM elements with car data
         document.querySelector('.car-image').src = car.photo1;
         document.querySelector('.fullname').textContent = car.fullname;
         document.querySelector('.price').textContent = car.price;
@@ -13,10 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.transmission').textContent = car.transmission;
         document.querySelector('.type').textContent = car.type;
 
-        // Add event listener to "Add to Cart" button
         document.querySelector('.add-to-cart-button').addEventListener('click', function () {
             addToCart(car);
-            location.reload(); // Refresh the page after adding to cart
+            location.reload();
         });
     } else {
         console.error('No car data found in local storage');
@@ -27,7 +25,7 @@ function addToCart(car) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems'));
     cartItems.push(car);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    updateCartIndicator(); // Update cart indicator after adding to cart
+    updateCartIndicator();
 }
 
 function updateCartIndicator() {
@@ -41,5 +39,5 @@ function updateCartIndicator() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    updateCartIndicator(); // Update cart indicator on page load
+    updateCartIndicator();
 });

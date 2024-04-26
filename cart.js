@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function addToCart(car) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-    // Add the current car to the cart
     cartItems.push(car);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-    // Refresh cart items display
     displayCartItems();
     displayTotalPrice();
 }
@@ -18,11 +16,9 @@ function addToCart(car) {
 function removeCartItem(index) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-    // Remove the car at the specified index
     cartItems.splice(index, 1);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-    // Refresh cart items display
     displayCartItems();
     displayTotalPrice();
 }

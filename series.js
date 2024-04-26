@@ -68,9 +68,7 @@ function displaySeries(data) {
         button.textContent = 'View Model';
         button.classList.add('card-button');
         button.addEventListener('click', () => {
-            // Save car data to local storage
             localStorage.setItem('selectedCar', JSON.stringify(car));
-            // Redirect to profile.html
             window.location.href = 'profile.html';
         });
 
@@ -126,16 +124,13 @@ function checkPriceRange(price, minPrice, maxPrice) {
 const applyFiltersBtn = document.getElementById('applyFiltersBtn');
 applyFiltersBtn.addEventListener('click', applyFilters);
 
-// Update engine options based on selected model
 const carModelSelect = document.getElementById('carModel');
 const carEngineSelect = document.getElementById('carEngine');
 
 carModelSelect.addEventListener('change', () => {
     const selectedModel = carModelSelect.value;
-    // Clear previous options
     carEngineSelect.innerHTML = '<option value="all">Everything</option>';
     
-    // Add engine options based on selected model
     if (selectedModel === '1') {
         carEngineSelect.innerHTML += `
         <option value="18i">18i</option>
@@ -216,5 +211,5 @@ function updateCartIndicator() {
     }
 }
 document.addEventListener('DOMContentLoaded', function () {
-    updateCartIndicator(); // Update cart indicator on page load
+    updateCartIndicator();
 });

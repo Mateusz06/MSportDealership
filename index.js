@@ -8,5 +8,5 @@ function updateCartIndicator() {
     }
 }
 document.addEventListener('DOMContentLoaded', function () {
-    updateCartIndicator(); // Update cart indicator on page load
+    updateCartIndicator();
 });
