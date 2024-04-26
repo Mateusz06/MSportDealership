@@ -109,3 +109,12 @@ body {
     background-color: #c7c7c7;
     margin-left: 5px;
 }
+
+.red-dot {
+    background-color: red !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
+    margin-left: 5px !important;
+}

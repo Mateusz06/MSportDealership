@@ -208,3 +208,12 @@ body {
     height: 2px;
     background-color: #dbdbdb;
 }
+
+.red-dot {
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}

@@ -96,3 +96,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } else { buyButton.classList.add("disable")}
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    displayCartItems();
+    displayTotalPrice();
+    updateCartIndicator();
+});
+
+function updateCartIndicator() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartIndicator = document.getElementById('cart-indicator');
+    if (cartItems.length > 0) {
+        cartIndicator.classList.add('red-dot');
+    } else {
+        cartIndicator.classList.remove('red-dot');
+    }
+}
+
+function addToCart(car) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push(car);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
+    displayTotalPrice();
+    updateCartIndicator();
+}
+
+function removeCartItem(index) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.splice(index, 1);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    displayCartItems();
+    displayTotalPrice();
+    updateCartIndicator();
+}

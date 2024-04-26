@@ -116,7 +116,15 @@ body {
 .card-additional .details {
     padding: 20px;
     background-color: #ffffff;
-    border: 2px solid #000000;
-    
+    border: 2px solid #000000; 
     border-radius: 2px;
+}
+
+.red-dot {
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
 }
